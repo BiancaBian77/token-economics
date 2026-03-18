@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Token 经济学：AI 时代的商业底层逻辑</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Token 经济学：AI 时代的商业底层逻辑</h1>
+</header>
+<h1 id="token-经济学ai-时代的商业底层逻辑">Token 经济学：AI
+时代的商业底层逻辑</h1>
+<blockquote>
+<p>五层框架，从成本结构到终局博弈，帮你系统性理解 AI
+产品背后的经济学。</p>
+</blockquote>
+<hr />
+<h2 id="导言一个核心观察">导言：一个核心观察</h2>
+<blockquote>
+<p>“未来所有的 AI 创业公司，本质上都是算力公司的经销商。”</p>
+</blockquote>
+<p>用户给产品付费，产品给 token 付费，token 的钱最终流向 Amazon
+Cloud、Google Cloud、阿里云。创业公司赚的是两者之间的差价。</p>
+<p>这个观察对吗？答案是：<strong>起点是对的，但终局不是。</strong></p>
+<p>本教案用五个层次帮你理解为什么。</p>
+<hr />
+<h2 id="第一层token-的成本结构">第一层：Token 的成本结构</h2>
+<h3 id="案例openai-vs-deepseek中美对比">案例：OpenAI vs
+DeepSeek（中美对比）</h3>
+<h3 id="什么是-token">什么是 Token？</h3>
+<p>一个 token 大约是 0.75 个英文单词，或 0.5 个中文字符。你每次跟 AI
+对话，本质上就是在<strong>买卖 token</strong>——发给 AI 的是”输入
+token”，AI 回复的是”输出 token”。</p>
+<h3 id="token-价格表2026-年-3-月数据">Token 价格表（2026 年 3
+月数据）</h3>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th style="text-align: center;">输入 (<span
+class="math inline">/<em>百</em><em>万</em><em>t</em><em>o</em><em>k</em><em>e</em><em>n</em>)|<em>输</em><em>出</em>(</span>/百万
+token)</th>
+<th style="text-align: center;">定位</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OpenAI GPT-4o</strong></td>
+<td style="text-align: center;">$2.50</td>
+<td style="text-align: center;">$10.00</td>
+<td>主力模型</td>
+</tr>
+<tr>
+<td><strong>OpenAI o3</strong></td>
+<td style="text-align: center;">$2.00</td>
+<td style="text-align: center;">$8.00</td>
+<td>推理模型</td>
+</tr>
+<tr>
+<td><strong>OpenAI GPT-5</strong></td>
+<td style="text-align: center;">$1.25</td>
+<td style="text-align: center;">$10.00</td>
+<td>最新旗舰</td>
+</tr>
+<tr>
+<td><strong>DeepSeek V3</strong></td>
+<td style="text-align: center;"><strong>$0.14</strong></td>
+<td style="text-align: center;"><strong>$0.28</strong></td>
+<td>主力模型</td>
+</tr>
+<tr>
+<td><strong>DeepSeek R1</strong></td>
+<td style="text-align: center;"><strong>$0.55</strong></td>
+<td style="text-align: center;"><strong>$2.19</strong></td>
+<td>推理模型</td>
+</tr>
+</tbody>
+</table>
+<h3 id="关键认知-1输出比输入贵-4-8-倍">关键认知 1：输出比输入贵 4-8
+倍</h3>
+<p>GPT-4o 的输出价格是输入的 4 倍（$10 vs
+$2.5）。因为生成文字比理解文字难得多——每生成一个
+token，模型都要重新跑一遍所有的注意力计算。</p>
+<p><strong>一个啰嗦的 AI 比一个简洁的 AI 贵好几倍。</strong></p>
+<h3 id="关键认知-2中美价格差-18-36-倍">关键认知 2：中美价格差 18-36
+倍</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;">GPT-4o</th>
+<th style="text-align: center;">DeepSeek V3</th>
+<th style="text-align: center;">差距</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输入</td>
+<td style="text-align: center;">$2.50</td>
+<td style="text-align: center;">$0.14</td>
+<td style="text-align: center;"><strong>18x</strong></td>
+</tr>
+<tr>
+<td>输出</td>
+<td style="text-align: center;">$10.00</td>
+<td style="text-align: center;">$0.28</td>
+<td style="text-align: center;"><strong>36x</strong></td>
+</tr>
+</tbody>
+</table>
+<p>同等能力的模型，DeepSeek 只有 OpenAI 的 1/18 到 1/36。三个原因：</p>
+<ol type="1">
+<li><strong>架构创新</strong>：DeepSeek V3 用 MoE 架构，总参数 671B
+但只激活 37B（100 人公司每次只派 5 人干活）</li>
+<li><strong>硬件成本差异</strong>：H800（中国特供版）+
+中国数据中心（电费、人工更低）</li>
+<li><strong>定价策略</strong>：DeepSeek 不依赖 API
+收入盈利，可以低于成本价抢市场</li>
+</ol>
+<h3 id="关键认知-3推理模型有隐藏-token">关键认知 3：推理模型有”隐藏
+token”</h3>
+<p>OpenAI o3 在给你回复前会先”内部思考”——你看不到，但按输出 token
+计费。一个 500 token 的回复可能实际消耗 2500
+token。<strong>用推理模型的实际成本可能是预期的 3-5 倍。</strong></p>
+<h3 id="关键认知-4token-成本在暴跌">关键认知 4：Token 成本在暴跌</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th style="text-align: center;">GPT-4 级别输入价格</th>
+<th style="text-align: center;">累计降幅</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023.03</td>
+<td style="text-align: center;">$30.00/百万</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td>2024.05</td>
+<td style="text-align: center;">$5.00</td>
+<td style="text-align: center;">6x</td>
+</tr>
+<tr>
+<td>2025.07</td>
+<td style="text-align: center;">$2.50</td>
+<td style="text-align: center;">12x</td>
+</tr>
+<tr>
+<td>2026.03</td>
+<td style="text-align: center;">$1.25（GPT-5 batch）</td>
+<td style="text-align: center;"><strong>24x</strong></td>
+</tr>
+</tbody>
+</table>
+<p>三年降了 24
+倍。这对创业公司是双刃剑：成本持续下降，但定价也会被迫下降。</p>
+<h3 id="练习算一笔真实的账">练习：算一笔真实的账</h3>
+<p><strong>场景：一个 AI 智能客服处理一次用户咨询</strong></p>
+<ul>
+<li>用户问题 + 历史记录：~3,000 输入 token</li>
+<li>AI 回复 + 内部检索：~2,000 输出 token</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>用哪个模型</th>
+<th style="text-align: center;">输入成本</th>
+<th style="text-align: center;">输出成本</th>
+<th style="text-align: center;">单次对话总成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT-4o</td>
+<td style="text-align: center;">$0.0075</td>
+<td style="text-align: center;">$0.02</td>
+<td style="text-align: center;"><strong>$0.028</strong></td>
+</tr>
+<tr>
+<td>DeepSeek V3</td>
+<td style="text-align: center;">$0.0004</td>
+<td style="text-align: center;">$0.0006</td>
+<td style="text-align: center;"><strong>$0.001</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>一次 AI 客服对话的成本：GPT-4o 约 ¥0.2，DeepSeek 约
+¥0.007。</strong> 极其便宜——但当你每天处理 10 万次对话时，就是 ¥2 万 vs
+¥700 的日成本差异。</p>
+<blockquote>
+<p><strong>本层要点</strong>：Token 分输入/输出，输出贵 4-8 倍；中美价差
+18 倍；推理模型有隐藏成本；三年降了 24 倍。</p>
+</blockquote>
+<hr />
+<h2 id="第二层token-的定价模型">第二层：Token 的定价模型</h2>
+<h3 id="案例anthropic-claude订阅制-vs-按量计费的博弈">案例：Anthropic
+Claude（订阅制 vs 按量计费的博弈）</h3>
+<h3 id="定价的核心矛盾">定价的核心矛盾</h3>
+<p>AI
+产品的成本是<strong>可变的</strong>（用户每说一句你就花一分钱），但用户希望价格是<strong>可预测的</strong>（每月花多少别吓到我）。这两个需求天然矛盾。</p>
+<h3 id="anthropic-的双轨定价">Anthropic 的双轨定价</h3>
+<p><strong>面向消费者：订阅制</strong></p>
+<table>
+<thead>
+<tr>
+<th>计划</th>
+<th style="text-align: center;">月费</th>
+<th>使用限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free</td>
+<td style="text-align: center;">$0</td>
+<td>每天约 30 条</td>
+</tr>
+<tr>
+<td>Pro</td>
+<td style="text-align: center;">$20</td>
+<td>每 5 小时约 45 条</td>
+</tr>
+<tr>
+<td>Max 5x</td>
+<td style="text-align: center;">$100</td>
+<td>5 倍 Pro 用量</td>
+</tr>
+<tr>
+<td>Max 20x</td>
+<td style="text-align: center;">$200</td>
+<td>20 倍 Pro 用量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>面向开发者：按量计费</strong></p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th style="text-align: center;">输入 (<span
+class="math inline">/<em>百</em><em>万</em><em>t</em><em>o</em><em>k</em><em>e</em><em>n</em>)|<em>输</em><em>出</em>(</span>/百万
+token)</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Haiku 4.5</td>
+<td style="text-align: center;">$1.00</td>
+<td style="text-align: center;">$5.00</td>
+</tr>
+<tr>
+<td>Sonnet 4.6</td>
+<td style="text-align: center;">$3.00</td>
+<td style="text-align: center;">$15.00</td>
+</tr>
+<tr>
+<td>Opus 4.6</td>
+<td style="text-align: center;">$5.00</td>
+<td style="text-align: center;">$25.00</td>
+</tr>
+</tbody>
+</table>
+<h3 id="订阅制的数学本质健身卡模型">订阅制的数学本质：健身卡模型</h3>
+<p>Anthropic 的数据显示：</p>
+<ul>
+<li>平均用户每天消耗约 $6 API 等价 → 实际推理成本约 $0.6/天 →
+<strong>$18/月</strong></li>
+<li>90% 的用户每天低于 $12 API 等价</li>
+<li>只有不到 5% 触及周限额</li>
+</ul>
+<pre><code>大量轻度用户的利润 + 少量重度用户的亏损 = 整体微利或持平</code></pre>
+<p>跟健身房一样——卖 1000 张卡，赌大部分人办了卡不来。</p>
+<h3 id="关键发现api-标价-实际成本">关键发现：API 标价 ≠ 实际成本</h3>
+<p>Anthropic 的 API 有约 <strong>10 倍加价率</strong>。$3/百万 token 的
+Sonnet，实际推理成本约 $0.3/百万 token。加价包含了：研发分摊、GPU
+折旧、安全投入、利润。</p>
+<p>所以一个”消耗 $5,000 API 等价”的重度用户，Anthropic 的实际成本约
+$500——不是 $5,000。</p>
+<h3 id="四种主流定价模式">四种主流定价模式</h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>代表</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>纯订阅</strong></td>
+<td>ChatGPT Plus $20/月</td>
+<td>用户可预测</td>
+<td>重度用户亏钱</td>
+</tr>
+<tr>
+<td><strong>纯按量</strong></td>
+<td>OpenAI API</td>
+<td>成本精确可控</td>
+<td>用户怕”惊喜账单”</td>
+</tr>
+<tr>
+<td><strong>混合制</strong></td>
+<td>Claude Max</td>
+<td>兼顾预测和灵活</td>
+<td>定价复杂</td>
+</tr>
+<tr>
+<td><strong>按结果计费</strong></td>
+<td>部分 Agent 产品</td>
+<td>按价值付费</td>
+<td>结果难归因</td>
+</tr>
+</tbody>
+</table>
+<p>2026 年 31% 的 AI 公司采用混合制。78% 的 IT 负责人遇到过 AI
+工具的”意外账单”。</p>
+<h3 id="练习给-ai-客服-saas-设计定价">练习：给 AI 客服 SaaS
+设计定价</h3>
+<p>基于第一层的成本（GPT-4o ¥0.2/次对话），设计三档方案：</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>方案</th>
+<th style="text-align: center;">月费</th>
+<th style="text-align: center;">含对话数</th>
+<th style="text-align: center;">超出价</th>
+<th style="text-align: center;">月 token 成本</th>
+<th style="text-align: center;">毛利率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starter</td>
+<td style="text-align: center;">¥599</td>
+<td style="text-align: center;">5,000 次</td>
+<td style="text-align: center;">¥0.2/次</td>
+<td style="text-align: center;">¥1,000</td>
+<td style="text-align: center;"><strong>-67%（亏损）</strong></td>
+</tr>
+<tr>
+<td>Pro</td>
+<td style="text-align: center;">¥2,999</td>
+<td style="text-align: center;">20,000 次</td>
+<td style="text-align: center;">¥0.15/次</td>
+<td style="text-align: center;">¥4,000</td>
+<td style="text-align: center;"><strong>-33%（亏损）</strong></td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td style="text-align: center;">¥9,999</td>
+<td style="text-align: center;">100,000 次</td>
+<td style="text-align: center;">¥0.10/次</td>
+<td style="text-align: center;">¥20,000</td>
+<td style="text-align: center;"><strong>-100%（巨亏）</strong></td>
+</tr>
+</tbody>
+</table>
+<p>等等——全亏？因为这里用的是 GPT-4o。如果换成 DeepSeek V3：</p>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th style="text-align: center;">月费</th>
+<th style="text-align: center;">月 token 成本</th>
+<th style="text-align: center;">毛利率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starter</td>
+<td style="text-align: center;">¥599</td>
+<td style="text-align: center;">¥35</td>
+<td style="text-align: center;"><strong>94%</strong></td>
+</tr>
+<tr>
+<td>Pro</td>
+<td style="text-align: center;">¥2,999</td>
+<td style="text-align: center;">¥140</td>
+<td style="text-align: center;"><strong>95%</strong></td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td style="text-align: center;">¥9,999</td>
+<td style="text-align: center;">¥700</td>
+<td style="text-align: center;"><strong>93%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>模型选择直接决定了你是盈利还是破产。</strong> 但 token
+成本只是冰山一角——第三层告诉你为什么。</p>
+<blockquote>
+<p><strong>本层要点</strong>：订阅制 = 健身卡逻辑；API 标价有 10
+倍加价；混合制成为主流；模型选择直接决定盈亏。</p>
+</blockquote>
+<hr />
+<h2 id="第三层ai-产品的单位经济学">第三层：AI 产品的单位经济学</h2>
+<h3 id="案例googlechat-nano-veo-3-的成本差异">案例：Google（Chat / Nano
+/ Veo 3 的成本差异）</h3>
+<h3 id="cogs-回来了">COGS 回来了</h3>
+<p>传统 SaaS 的边际成本趋近于零，毛利率 80-90%。AI
+产品彻底打破了这个规则——<strong>每一次用户请求都有实实在在的推理成本。</strong></p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">传统 SaaS</th>
+<th style="text-align: center;">AI 产品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>毛利率</td>
+<td style="text-align: center;">80-90%</td>
+<td style="text-align: center;">50-70%</td>
+</tr>
+<tr>
+<td>边际成本</td>
+<td style="text-align: center;">~0</td>
+<td style="text-align: center;">每次请求有成本</td>
+</tr>
+<tr>
+<td>规模效应</td>
+<td style="text-align: center;">越大越赚</td>
+<td style="text-align: center;">越大成本越高</td>
+</tr>
+</tbody>
+</table>
+<h3 id="google-三种-ai-产品的成本拆解">Google 三种 AI
+产品的成本拆解</h3>
+<p><strong>文本对话（Gemini Chat）</strong></p>
+<pre><code>一次对话 ≈ $0.0025（用 Flash 模型）
+活跃用户每月 ≈ $3.75
+Google AI Pro 订阅 = $19.99/月
+→ 大部分用户赚钱</code></pre>
+<p><strong>端侧小模型（Gemini Nano）</strong></p>
+<pre><code>推理成本 = $0（跑在用户手机上）
+Google 的成本 = 模型训练分摊 + 软件维护
+→ 不直接赚钱，用来绑定 Android 生态</code></pre>
+<p><strong>视频生成（Veo 3）</strong></p>
+<pre><code>10 秒视频 = $4.00（标准质量）
+对比一次 Chat = $0.0025
+→ 视频比文本贵 1,600 倍</code></pre>
+<p>Google AI Pro 用户每月 1000 credit，一个 10 秒视频消耗 125
+credit。<strong>一个用户每月只能生成 8 个短视频就用完额度。</strong>
+重度视频用户的月成本可能是订阅费的 5-15 倍。</p>
+<h3 id="用户小王的一天">用户小王的一天</h3>
+<table>
+<thead>
+<tr>
+<th>行为</th>
+<th>模型</th>
+<th style="text-align: center;">成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>问天气+日程</td>
+<td>Nano（端侧）</td>
+<td style="text-align: center;">$0</td>
+</tr>
+<tr>
+<td>路上聊 5 轮</td>
+<td>Flash</td>
+<td style="text-align: center;">$0.012</td>
+</tr>
+<tr>
+<td>分析 20 页 PDF</td>
+<td>Pro</td>
+<td style="text-align: center;">$0.18</td>
+</tr>
+<tr>
+<td>生成一张图片</td>
+<td>Imagen 3</td>
+<td style="text-align: center;">$0.04</td>
+</tr>
+<tr>
+<td>写一封长邮件</td>
+<td>Flash</td>
+<td style="text-align: center;">$0.008</td>
+</tr>
+<tr>
+<td>生成 8 秒视频</td>
+<td>Veo 3 Fast</td>
+<td style="text-align: center;"><strong>$1.20</strong></td>
+</tr>
+<tr>
+<td><strong>全天总计</strong></td>
+<td></td>
+<td style="text-align: center;"><strong>$1.44</strong></td>
+</tr>
+</tbody>
+</table>
+<p>每月 22 个工作日：$31.68。他付了 $19.99。<strong>亏
+$11.69。</strong></p>
+<p>去掉视频？月成本 $5.28。<strong>赚 $14.71。</strong></p>
+<p><strong>一个功能就能反转盈亏。</strong> 这就是为什么所有 AI
+产品都在高成本功能上设严格额度。</p>
+<h3 id="token-只是冰山一角">Token 只是冰山一角</h3>
+<p>AI 产品的真实成本全景：</p>
+<table>
+<thead>
+<tr>
+<th>成本项</th>
+<th style="text-align: center;">占比</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理 token</td>
+<td style="text-align: center;">15-25%</td>
+<td>第一层算的</td>
+</tr>
+<tr>
+<td>GPU 基础设施</td>
+<td style="text-align: center;">10-15%</td>
+<td>闲置也要付的固定成本</td>
+</tr>
+<tr>
+<td>模型训练分摊</td>
+<td style="text-align: center;">5-10%</td>
+<td>GPT-5 训练 $500M+，分摊到每次请求</td>
+</tr>
+<tr>
+<td>数据/带宽</td>
+<td style="text-align: center;">3-5%</td>
+<td>对话历史、日志</td>
+</tr>
+<tr>
+<td>安全合规</td>
+<td style="text-align: center;">3-5%</td>
+<td>内容审核、红队测试</td>
+</tr>
+<tr>
+<td>研发人力</td>
+<td style="text-align: center;">20-30%</td>
+<td>AI 工程师年薪 $300K-$1M</td>
+</tr>
+<tr>
+<td>获客成本</td>
+<td style="text-align: center;">15-25%</td>
+<td>营销、销售</td>
+</tr>
+<tr>
+<td>一般管理</td>
+<td style="text-align: center;">5-10%</td>
+<td>办公、法务</td>
+</tr>
+</tbody>
+</table>
+<p><strong>真实毛利率：55-70%。真实净利率：-20% 到 +10%。</strong>
+大部分 AI 公司目前亏钱。</p>
+<h3 id="行业三档">行业三档</h3>
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th style="text-align: center;">毛利率</th>
+<th>特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supernova（超新星）</td>
+<td style="text-align: center;">~25%</td>
+<td>未优化，烧钱阶段</td>
+</tr>
+<tr>
+<td>Shooting Star（流星）</td>
+<td style="text-align: center;">~60%</td>
+<td>定制模型+精细定价</td>
+</tr>
+<tr>
+<td>North Star（北极星）</td>
+<td style="text-align: center;">75%+</td>
+<td>接近传统 SaaS（极少）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>本层要点</strong>：Token 只占成本 15-25%；不同模态差 1600
+倍；模型路由是提升毛利率的关键；大部分 AI 公司目前净亏损。</p>
+</blockquote>
+<hr />
+<h2 id="第四层算力供给侧">第四层：算力供给侧</h2>
+<h3 id="案例nvidia-云厂商">案例：NVIDIA + 云厂商</h3>
+<h3 id="钱的流向">钱的流向</h3>
+<pre><code>用户付给产品 → 产品付给模型厂商 → 模型厂商付给云厂商 → 云厂商付给 NVIDIA
+    ¥50              $0.12              $3/GPU·hr          $40,000/chip</code></pre>
+<h3 id="nvidia食物链顶端">NVIDIA：食物链顶端</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>年收入</td>
+<td>$2,159 亿</td>
+</tr>
+<tr>
+<td>数据中心占比</td>
+<td>91%</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td><strong>73-75%</strong></td>
+</tr>
+<tr>
+<td>GPU 市场份额</td>
+<td>87%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一块 B200 芯片：制造成本 $6,000，售价 $45,000，芯片级毛利率
+82%。</strong></p>
+<p>对比：iPhone 毛利率 60%，星巴克拿铁 70%，NVIDIA B200
+<strong>82%</strong>。</p>
+<p><strong>NVIDIA 卖的不是芯片，是垄断性的”AI 税”。</strong> 每一次 AI
+推理都在给 NVIDIA 交税。</p>
+<h3 id="云厂商中间商">云厂商：中间商</h3>
+<table>
+<thead>
+<tr>
+<th>云厂商</th>
+<th style="text-align: center;">H100 每 GPU 每小时</th>
+<th style="text-align: center;">月收入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS</td>
+<td style="text-align: center;">$3.90</td>
+<td style="text-align: center;">$2,808</td>
+</tr>
+<tr>
+<td>Google Cloud</td>
+<td style="text-align: center;">$3.00</td>
+<td style="text-align: center;">$2,160</td>
+</tr>
+<tr>
+<td>Azure</td>
+<td style="text-align: center;">$6.98</td>
+<td style="text-align: center;">$5,025</td>
+</tr>
+</tbody>
+</table>
+<p>一块 H100 买入价 ~$30,000。按 AWS 价格，<strong>11
+个月回本</strong>。但 GPU 利用率通常只有 30-50%——实际回本周期拉长到
+<strong>27 个月</strong>。</p>
+<h3 id="模型厂商还在亏钱">模型厂商：还在亏钱</h3>
+<p>OpenAI 2025 年收入约 $130 亿，但支出 $150-180 亿。</p>
+<p>DeepSeek 完全不同：~200 人团队（OpenAI 的 1/15），不依赖 API
+盈利，可以亏损定价抢市场。</p>
+<h3 id="自部署-vs-调-api">自部署 vs 调 API</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">月 token 用量</th>
+<th>更便宜的选择</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">&lt; 5000 万</td>
+<td>调 API</td>
+<td>固定成本太高</td>
+</tr>
+<tr>
+<td style="text-align: center;">5000 万-5 亿</td>
+<td>看具体场景</td>
+<td>灰色地带</td>
+</tr>
+<tr>
+<td style="text-align: center;">&gt; 5 亿</td>
+<td>自部署开源模型</td>
+<td>节省 40-60%</td>
+</tr>
+</tbody>
+</table>
+<p>隐性成本：运维工程师 $750-3,000/月，GPU 利用率只有 30-40%，无 SLA
+保障。<strong>大多数团队在 2026 年选择调 API。</strong></p>
+<h3 id="谁最赚钱">谁最赚钱？</h3>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>代表</th>
+<th style="text-align: center;">毛利率</th>
+<th>护城河</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>芯片</td>
+<td>NVIDIA</td>
+<td style="text-align: center;">75%</td>
+<td>极深</td>
+</tr>
+<tr>
+<td>云基础设施</td>
+<td>AWS/Azure</td>
+<td style="text-align: center;">50-60%</td>
+<td>深</td>
+</tr>
+<tr>
+<td>模型厂商</td>
+<td>OpenAI/Anthropic</td>
+<td style="text-align: center;">60-70%</td>
+<td>中</td>
+</tr>
+<tr>
+<td>应用层</td>
+<td>AI 创业公司</td>
+<td style="text-align: center;">30-50%</td>
+<td>浅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>利润从下往上逐层递减。</strong>
+但两个力量在改变格局：开源模型侵蚀 API 利润 + AI
+芯片竞争加剧。终局：token 成本趋近于电费 + 硬件折旧。</p>
+<h3 id="练习从一次-ai-客服对话看价值分配">练习：从一次 AI
+客服对话看价值分配</h3>
+<pre><code>用户每月付给 AI 客服 SaaS：¥2,999
+SaaS 付给 OpenAI API：~¥4,000（20,000 次 × ¥0.2）
+OpenAI 付给 Azure GPU 租金：~¥60
+Azure 付给 NVIDIA 芯片分摊：~¥25
+
+注意：SaaS 公司 token 成本已经超过用户付费。
+所以要么换便宜模型，要么提价，要么死。</code></pre>
+<blockquote>
+<p><strong>本层要点</strong>：NVIDIA 75%
+毛利率吃最大利润；利润从底层到应用层递减；开源+芯片竞争在压低整条链；token
+成本终将趋近电费。</p>
+</blockquote>
+<hr />
+<h2 id="第五层终局博弈">第五层：终局博弈</h2>
+<h3 id="案例manus当-token-变成水电煤">案例：Manus（当 Token
+变成水电煤）</h3>
+<h3 id="manus-的经济学">Manus 的经济学</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARR</td>
+<td>$1 亿（8 个月达到，史上最快）</td>
+</tr>
+<tr>
+<td>团队</td>
+<td>78 人</td>
+</tr>
+<tr>
+<td>人均收入</td>
+<td>$128 万/年/人</td>
+</tr>
+<tr>
+<td>累计处理 token</td>
+<td>147 万亿</td>
+</tr>
+<tr>
+<td>结局</td>
+<td>被 Meta $25 亿收购</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键数字：多 Agent 系统消耗 15 倍 token。</strong> 但 token
+在 Manus 的成本里只占 20%。真正的大头是虚拟机、浏览器自动化、存储——“让
+AI 去操作真实世界”的计算资源。</p>
+<h3 id="meta-花-25-亿买的是什么">Meta 花 $25 亿买的是什么？</h3>
+<p>不是 token 差价，而是：</p>
+<ol type="1">
+<li><strong>Agent 编排系统</strong>——经过 147 万亿 token 实战打磨的多
+agent 协作框架</li>
+<li><strong>8000
+万次任务的数据飞轮</strong>——哪些策略有效、哪些工具序列成功率高</li>
+<li><strong>用户工作流嵌入</strong>——用户把 Manus
+嵌入日常流程后，迁移成本极高</li>
+</ol>
+<h3 id="终局推演2028-年-ai-产业">终局推演：2028 年 AI 产业</h3>
+<p>假设 token 再降 10 倍，开源追平闭源，NVIDIA 垄断被打破：</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>护城河变化</th>
+<th style="text-align: center;">毛利率趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>芯片层</td>
+<td>缩小（竞争加剧）</td>
+<td style="text-align: center;">75% → 55-65%</td>
+</tr>
+<tr>
+<td>云基础设施</td>
+<td>稳定（规模效应）</td>
+<td style="text-align: center;">50-60% → 40-50%</td>
+</tr>
+<tr>
+<td>模型层</td>
+<td><strong>大幅缩水</strong>（开源追平）</td>
+<td style="text-align: center;">60% → 20-40%</td>
+</tr>
+<tr>
+<td>中间件层</td>
+<td>新出现（Agent 编排）</td>
+<td style="text-align: center;">50-65%</td>
+</tr>
+<tr>
+<td>应用层</td>
+<td><strong>取决于护城河深度</strong></td>
+<td style="text-align: center;">40-70%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>最大变化：模型层利润被压缩，应用层和中间件层的相对价值上升。</strong></p>
+<h3 id="ai-创业公司的四种护城河">AI 创业公司的四种护城河</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>例子</th>
+<th>可复制性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>专有数据</strong></td>
+<td>千万次用户交互的模式数据</td>
+<td>极难</td>
+</tr>
+<tr>
+<td><strong>工作流嵌入</strong></td>
+<td>用户把产品嵌入了日常流程</td>
+<td>迁移成本高</td>
+</tr>
+<tr>
+<td><strong>领域专家系统</strong></td>
+<td>特定行业积累的知识体系</td>
+<td>需多年积累</td>
+</tr>
+<tr>
+<td><strong>网络效应</strong></td>
+<td>双边平台的供需互相吸引</td>
+<td>先发优势</td>
+</tr>
+</tbody>
+</table>
+<p>88% 的 CEO
+已经认为”部署速度”比”模型精度”更重要——市场在从”谁的模型好”转向”谁能更快解决我的问题”。</p>
+<h3 id="练习ai-客服-saas-的终局推演">练习：AI 客服 SaaS 的终局推演</h3>
+<p><strong>2026（现在）：</strong> - 调 GPT-4o API，token 成本 ¥0.2/次 -
+没有自有数据，护城河 = 0 - 竞争对手可以一周内做出同样的产品</p>
+<p><strong>2027（如果什么都不做）：</strong> - 10 个竞品出现，价格战从
+¥2,999 打到 ¥599 - 毛利率从 95% 降到 30% - 融资烧完，公司死亡</p>
+<p><strong>2028（如果做对了）：</strong> - 积累了 500 万次真实客服对话 →
+知道什么回复策略转化率最高 - 自研小模型（基于数据微调）→ 成本降到 API 的
+1/10 - 深度对接客户 CRM/ERP → 替换成本极高 - “用 XX 做客服”成为行业标准
+→ 品牌护城河 - <strong>从”token
+经销商”变成”智能客服的事实标准”</strong></p>
+<blockquote>
+<p><strong>本层要点</strong>：90%+ 的 API wrapper
+公司会失败；活下来需要数据飞轮、工作流嵌入、领域知识或网络效应；终局不是做经销商，而是成为某个领域的事实标准。</p>
+</blockquote>
+<hr />
+<h2 id="总结五层框架回顾">总结：五层框架回顾</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 42%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr>
+<th>层级</th>
+<th>核心认知</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>第一层：成本结构</strong></td>
+<td>输出比输入贵 4-8x，中美价差 18x，三年降 24 倍</td>
+<td>OpenAI vs DeepSeek</td>
+</tr>
+<tr>
+<td><strong>第二层：定价模型</strong></td>
+<td>订阅制 = 健身卡逻辑，混合制成为主流</td>
+<td>Anthropic Claude</td>
+</tr>
+<tr>
+<td><strong>第三层：单位经济学</strong></td>
+<td>Token 只占 15-25%，视频比文本贵 1600 倍</td>
+<td>Google Chat/Nano/Veo3</td>
+</tr>
+<tr>
+<td><strong>第四层：供给侧</strong></td>
+<td>NVIDIA 75% 毛利率吃最大利润，利润底层到应用层递减</td>
+<td>NVIDIA + 云厂商</td>
+</tr>
+<tr>
+<td><strong>第五层：终局博弈</strong></td>
+<td>Token 变水电煤后，护城河 = 数据+工作流+领域知识+网络效应</td>
+<td>Manus</td>
+</tr>
+</tbody>
+</table>
+<h3 id="最终回答">最终回答</h3>
+<blockquote>
+<p><strong>所有 AI
+创业公司的起点是算力经销商，但终点不能是。</strong></p>
+</blockquote>
+<p>起步靠 token 差价活着没问题。但如果三年内不能建立独立于 token
+的护城河，就会在 token 成本持续下降的过程中被淘汰。</p>
+<p>Token 是 AI
+时代的石油。但卖石油的不是最赚钱的——<strong>把石油变成塑料、变成化纤、变成药品的人</strong>，才是最终的赢家。</p>
+<hr />
+<p><em>数据来源：OpenAI / Anthropic / DeepSeek / Google
+官方定价页面，NVIDIA FY2026 财报，Bessemer Venture Partners State of
+AI，Manus 公开财务数据，Epoch AI 芯片成本分析。数据截至 2026 年 3
+月。</em></p>
+</body>
+</html>
